@@ -1,24 +1,21 @@
 import java.util.Scanner;
 
-public class Subtraction {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Prompt the user to enter the first number
-        System.out.print("Enter the first number: ");
-        int num1 = scanner.nextInt();
-
-        // Prompt the user to enter the second number
-        System.out.print("Enter the second number: ");
-        int num2 = scanner.nextInt();
-
-        // Perform subtraction
-        int result = num1 - num2;
-
-        // Display the result
-        System.out.println("Result of subtraction: " + result);
-
-        // Close the scanner
-        scanner.close();
+class Subtraction{
+    public double subtract(double num1, double num2){
+        return num1-num2;
     }
+}
+public class Subtract {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        float num1=input.nextFloat();
+        System.out.print("Enter the second number: ");
+        float num2=input.nextFloat();
+        Subtraction subs=new Subtraction();
+        double results=subs.subtract(num1, num2);
+        System.out.println(results);
+    input.close();  
+    }
+    
 }
